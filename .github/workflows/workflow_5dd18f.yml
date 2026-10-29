@@ -1,0 +1,12 @@
+name: CI/CD
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  process-task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare workspace
+        run: echo "workspace ready"
